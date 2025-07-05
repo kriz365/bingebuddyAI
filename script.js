@@ -1,5 +1,5 @@
 // TMDb API Configuration
-const TMDB_API_KEY = cb5a705ba8241821cf68df556147c11a; // You'll need to get this from https://www.themoviedb.org/settings/api
+const apiKey = import.meta.env.VITE_TMDB_API_KEY; // You'll need to get this from https://www.themoviedb.org/settings/api
 const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
 
 // Mood to Genre Mapping
