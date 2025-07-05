@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BingeBuddy Demo - Movie Recommender</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-film"></i>
+                <h1>BingeBuddy</h1>
+            </div>
+            <p class="tagline">Discover your next favorite movie with AI-powered recommendations</p>
+
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Search Section -->
+            <section class="search-section">
+                <div class="search-container">
+                    <h2>What are you in the mood for?</h2>
+                    
+                    <!-- Mood Selection -->
+                    <div class="mood-section">
+                        <h3>Choose your mood:</h3>
+                        <div class="mood-grid">
+                            <button class="mood-btn" data-mood="happy">
+                                <i class="fas fa-laugh"></i>
+                                <span>Happy</span>
+                            </button>
+                            <button class="mood-btn" data-mood="sad">
+                                <i class="fas fa-tissue"></i>
+                                <span>Sad</span>
+                            </button>
+                            <button class="mood-btn" data-mood="excited">
+                                <i class="fas fa-fire"></i>
+                                <span>Excited</span>
+                            </button>
+                            <button class="mood-btn" data-mood="relaxed">
+                                <i class="fas fa-spa"></i>
+                                <span>Relaxed</span>
+                            </button>
+                            <button class="mood-btn" data-mood="mysterious">
+                                <i class="fas fa-question"></i>
+                                <span>Mysterious</span>
+                            </button>
+                            <button class="mood-btn" data-mood="romantic">
+                                <i class="fas fa-heart"></i>
+                                <span>Romantic</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Genre Selection -->
+                    <div class="genre-section">
+                        <h3>Or pick a genre:</h3>
+                        <div class="genre-grid">
+                            <button class="genre-btn" data-genre="action">Action</button>
+                            <button class="genre-btn" data-genre="comedy">Comedy</button>
+                            <button class="genre-btn" data-genre="drama">Drama</button>
+                            <button class="genre-btn" data-genre="horror">Horror</button>
+                            <button class="genre-btn" data-genre="romance">Romance</button>
+                            <button class="genre-btn" data-genre="sci-fi">Sci-Fi</button>
+                            <button class="genre-btn" data-genre="thriller">Thriller</button>
+                            <button class="genre-btn" data-genre="animation">Animation</button>
+                        </div>
+                    </div>
+
+                    <!-- Search Button -->
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                        Find Movies
+                    </button>
+                </div>
+            </section>
+
+            <!-- Loading Section -->
+            <section class="loading-section" id="loadingSection" style="display: none;">
+                <div class="loading-spinner">
+                    <i class="fas fa-film fa-spin"></i>
+                </div>
+                <p>Finding the perfect movies for you...</p>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <div class="results-header">
+                    <h2>Recommended Movies</h2>
+                    <button class="new-search-btn" id="newSearchBtn">
+                        <i class="fas fa-arrow-left"></i>
+                        New Search
+                    </button>
+                </div>
+                <div class="movies-grid" id="moviesGrid">
+                    <!-- Movies will be populated here -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 BingeBuddy. Powered by TMDb API.</p>
+        </footer>
+    </div>
+
+    <!-- Movie Modal -->
+    <div class="modal" id="movieModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="demo.js"></script>
+</body>
+</html> 
